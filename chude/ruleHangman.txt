@@ -1,0 +1,12 @@
+1. We will choose a secret word/phrases.
+2. The length of word/phrases is equal to number of the black line.
+3. You will need to guess our word/phrases letter by letter by click in letter
+   you want.
+4. Start guess letters: If your guess is correct we will replace the blank line
+   with the correct letter.
+5. Whenever you guess a letter that is not in the secret word/phrase we will
+   draw one part of hangman.
+6. You win when you guess the correct word (your score +10 when you 
+   correct the word without hint and +5 when you take hint). 
+   You lose if the picture of hangman is done 
+   (6 times wrong answer -> you lose).

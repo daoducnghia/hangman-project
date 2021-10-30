@@ -1,0 +1,10 @@
+cat
+rabbit
+penguin
+butterfly
+sheep
+peacock
+parrot
+clownfish
+leopard
+dolphin
