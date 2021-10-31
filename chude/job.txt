@@ -7,3 +7,4 @@ carpenter
 astronaut
 lawyer
 firefighter
+magician
