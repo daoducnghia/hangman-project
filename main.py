@@ -28,7 +28,7 @@ class HangMan:
     def update_screen(self):
         '''Đi đến màn hình bắt đầu khi bất đầu chơi'''
         self.limbs = 0
-        self.mark = False
+        self.mark_hint = False
 
     def run_game(self):
         '''Chạy game'''
