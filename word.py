@@ -7,7 +7,7 @@ class Word:
     def __init__(self):
         self.word1 = ""  # chu de
         self.word = ""  # tu
-        self.guessed = []  # trả về chuỗi _ _ _
+        self.guessed = []  # chứa các chữ cái mà người chơi đã chọn
 
     def randomWord(self):  # chon ngau nhien chu de
         file = open('words.txt')
