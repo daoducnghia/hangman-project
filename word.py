@@ -10,16 +10,16 @@ class Word:
         self.guessed = []  # chứa các chữ cái mà người chơi đã chọn
 
     def randomWord(self):  # chon ngau nhien chu de
-        file = open('words.txt')
-        f = file.readlines()
+        with open('words.txt') as file:
+            f = file.readlines()
         i = random.randrange(0, len(f) - 1)
-        return f[i][:-1]
+        return f[i][:-1]# trả về chuỗi từ không chứa kí tự xuống dòng
 
     def randomWord1(self):  # chon ngau nhien tu khoa
-        file2 = open("chude"+"/"+self.word1+".txt")
-        f2 = file2.readlines()
+        with  open("chude"+"/"+self.word1+".txt") as file2:
+            f2 = file2.readlines()
         j = random.randrange(0, len(f2)-1)
-        return f2[j][:-1]
+        return f2[j][:-1] #trả về chuỗi từ không chứa kí tự xuống dòng
 
     def spacedOut(self):  # trả về chuỗi _ _ _ _ và các chữ cái đc điền
         spacedWord = ''
