@@ -17,7 +17,7 @@ class HangMan:
         icon_img = pygame.image.load('pic/icon.png')
         pygame.display.set_icon(icon_img)
 
-        self.inplay = True  # để đánh dấu xem đx kết thúc trò chơi hay chưa
+        self.inplay = True  # để đánh dấu xem đã kết thúc trò chơi hay chưa
         self.mark_hint = False  # để kiểm tra xem người chơi có ấn vào nút gợi ý không
         self.mark_play = False  # kiểm tra xem có ấn nút play hay không
         self.mark_rule = False  # kiểm tra xem có ấn vào nút luật chơi không
@@ -69,7 +69,7 @@ class HangMan:
                 # kiểm tra xem chữ ấy có thuộc từ cần điền không
                 if self.setting.hang(chr(letter), self.setting.Word.word):
                     if self.limbs != 5:
-                        self.limbs += 1  # nếu sai thi sẽ hiện thêm một cánh tay
+                        self.limbs += 1  # nếu sai thi sẽ hiện thêm một thêm một phần
                     else:
                         pygame.mixer.Sound.play(
                             self.setting.sound4)  # chèn âm thanh
