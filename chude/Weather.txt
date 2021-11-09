@@ -1,0 +1,9 @@
+sunny
+windy
+thunder
+rainbow
+hurricane
+snowy
+tornado
+foggy
+lightning
