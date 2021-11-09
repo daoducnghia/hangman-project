@@ -4,3 +4,5 @@ Food
 Animals
 Tree
 City
+Instrument
+Weather
