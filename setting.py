@@ -111,11 +111,14 @@ class Setting:
         winTxt = 'WINNER!, press any key to play next...'
         print(self.Score.score)
         ai_game.win.fill(self.GREEN)
+
         if winner == True:
             self.Score.update_score(ai_game.mark_hint)
             label = self.lost_font.render(winTxt, 1, self.BLACK)
         else:
             label = self.lost_font.render(lostTxt, 1, self.BLACK)
+
+        self.Score.check_highScore()
 
         wordTxt = self.lost_font.render(self.Word.word.upper(), 1, self.BLACK)
         wordWas = self.lost_font.render('The phrase was: ', 1, self.BLACK)
@@ -124,12 +127,17 @@ class Setting:
                 'Your score: '+str(self.Score.score), 1, self.BLACK)
             ai_game.win.blit(scoreOfYou, (self.winWidth / 2 -
                              scoreOfYou.get_width() / 2, 130))
+            HighScore = self.lost_font.render(
+                'High Score: '+str(self.Score.HighScore), 1, self.BLACK)
+            ai_game.win.blit(HighScore, (self.winWidth / 2 -
+                             HighScore.get_width() / 2, 180))
+
         ai_game.win.blit(wordTxt, (self.winWidth/2 -
-                         wordTxt.get_width()/2, 295))
+                         wordTxt.get_width()/2, 330))
         ai_game.win.blit(wordWas, (self.winWidth/2 -
-                         wordWas.get_width()/2, 245))
+                         wordWas.get_width()/2, 280))
         ai_game.win.blit(label, (self.winWidth / 2 -
-                         label.get_width() / 2, 190))
+                         label.get_width() / 2, 230))
         pygame.display.update()
 
         again = True
