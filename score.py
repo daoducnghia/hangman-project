@@ -21,6 +21,15 @@ class Score:
             self.score = self.score+5
         else:
             self.score = self.score+10
-
+            
+    def check_highScore(self):
+        with open("score.txt",'r') as f:
+            r=f.read()
+        self.HighScore=int(r)
+        if self.HighScore<self.score:
+            self.HighScore=self.score
+            with open("score.txt",'w') as f:
+                f.write(str(self.HighScore))
+                
     def reset_score(self):  # cho điểm về 0
         self.score = 0
