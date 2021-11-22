@@ -131,9 +131,9 @@ class Setting:
                 'High Score: '+str(self.Score.HighScore), 1, self.BLACK)
             ai_game.win.blit(HighScore, (20, 20))
 
-            pic = pygame.image.load(
-                str(self.Word.word1)+"/"+str(self.Word.word)+".png")
-            ai_game.win.blit(pic, (350 - pic.get_width()/2,320))            
+        pic = pygame.image.load(
+            str(self.Word.word1)+"/"+str(self.Word.word)+".png")
+        ai_game.win.blit(pic, (350 - pic.get_width()/2,320))            
 
         ai_game.win.blit(wordTxt, (self.winWidth/2 -
                          wordTxt.get_width()/2, 280))
