@@ -68,7 +68,7 @@ class Button:
         if ai_game.mark_hint == True:  # nếu có ấn vào ô gợi ý thì hiện hình ảnh
             pic = pygame.image.load(
                 str(setting.Word.word1)+"/"+str(setting.Word.word)+".png")
-            ai_game.win.blit(pic, (475, 320))
+            ai_game.win.blit(pic, (440, 310))
 
     def draw_LuatChoi(self, setting, ai_game):  # vẽ luật chơi
         win = ai_game.win
