@@ -108,7 +108,7 @@ class Setting:
 
     def end(self, ai_game, winner=False):
         lostTxt = 'You Lost, press any key to play again...'
-        winTxt = 'WINNER!, press any key to play next...'
+        winTxt = 'WINNER! Press any key to play next...'
         print(self.Score.score)
         ai_game.win.fill(self.GREEN)
 
@@ -129,15 +129,18 @@ class Setting:
                              scoreOfYou.get_width() / 2, 130))
             HighScore = self.lost_font.render(
                 'High Score: '+str(self.Score.HighScore), 1, self.BLACK)
-            ai_game.win.blit(HighScore, (self.winWidth / 2 -
-                             HighScore.get_width() / 2, 180))
+            ai_game.win.blit(HighScore, (20, 20))
+
+            pic = pygame.image.load(
+                str(self.Word.word1)+"/"+str(self.Word.word)+".png")
+            ai_game.win.blit(pic, (350 - pic.get_width()/2,320))            
 
         ai_game.win.blit(wordTxt, (self.winWidth/2 -
-                         wordTxt.get_width()/2, 330))
+                         wordTxt.get_width()/2, 280))
         ai_game.win.blit(wordWas, (self.winWidth/2 -
-                         wordWas.get_width()/2, 280))
+                         wordWas.get_width()/2, 230))
         ai_game.win.blit(label, (self.winWidth / 2 -
-                         label.get_width() / 2, 230))
+                         label.get_width() / 2, 180))
         pygame.display.update()
 
         again = True
